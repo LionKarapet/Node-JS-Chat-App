@@ -42,13 +42,13 @@
     }
 
     function getMessages(){
-      $.get('http://localhost:3000/messages', (data) => {
+      $.get('https://chat-app-eua.herokuapp.com/messages', (data) => {
         data.forEach(addMessages);
       })
     }
 
     function sendMessage(message){
-      $.post('http://localhost:3000/messages', message)
+      $.post('https://chat-app-eua.herokuapp.com/messages', message)
     }
 </script>
 </body>

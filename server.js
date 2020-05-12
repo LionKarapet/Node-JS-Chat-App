@@ -36,7 +36,7 @@ io.on('connection', () =>{
   console.log('a user is connected')
 });
 
-mongoose.connect(dbUrl,{useNewUrlParser: true, useUnifiedTopology: true },(err) => {
+mongoose.connect(process.env.MONGODB_URI || dbUrl,{useNewUrlParser: true, useUnifiedTopology: true },(err) => {
   console.log('mongodb connected',err);
 });
 
